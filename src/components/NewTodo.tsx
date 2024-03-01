@@ -17,7 +17,7 @@ const NewTodo: React.FC<{ addItems: (todo: Todo) => void }> = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form-container">
       <input type="text" placeholder="New todo..." ref={inputRef} />
       <button>Add</button>
     </form>

@@ -12,7 +12,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>TODO VITE APP</h1>
       <NewTodo addItems={addItems} />
       <Todos items={items} />

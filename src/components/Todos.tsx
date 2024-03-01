@@ -3,7 +3,7 @@ import Todo from "./Todo";
 
 const Todos: React.FC<{ items: TodoModel[] }> = (props) => {
   return (
-    <ul>
+    <ul className="todos">
       {props.items.map((item) => (
         <Todo key={item.id} item={item.text} />
       ))}
