@@ -11,11 +11,22 @@ function App() {
     setItems([...items, item]);
   };
 
+  const removeItems = (id: string) => {
+    console.log(id);
+    const newItems = items.filter((item) => {
+      if (item.id === id) {
+        return;
+      }
+      return item;
+    });
+    setItems(newItems);
+  };
+
   return (
     <div className="container">
       <h1>TODO VITE APP</h1>
       <NewTodo addItems={addItems} />
-      <Todos items={items} />
+      <Todos items={items} removeItems={removeItems} />
     </div>
   );
 }
