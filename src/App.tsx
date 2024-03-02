@@ -13,12 +13,7 @@ function App() {
 
   const removeItems = (id: string) => {
     console.log(id);
-    const newItems = items.filter((item) => {
-      if (item.id === id) {
-        return;
-      }
-      return item;
-    });
+    const newItems = items.filter((item) => item.id !== id);
     setItems(newItems);
   };
 
